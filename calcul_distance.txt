@@ -1,3 +1,5 @@
+#include <math.h>
+
 double dx = xB - xA;
 double dy = yB - yA;
 
@@ -5,12 +7,11 @@ double t =
     ((xway - xA) * dx + (yway - yA) * dy)
     / (dx * dx + dy * dy);
 
-double xp = x1 + t * dx;
-double yp = y1 + t * dy;
-
+double xp = xA + t * dx;
+double yp = yA + t * dy;
 
 double distance =
-    Sqrt(
+    sqrt(
         (xp - xA) * (xp - xA) +
         (yp - yA) * (yp - yA)
     );
